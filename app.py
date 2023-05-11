@@ -35,6 +35,21 @@ def upload():
         file_info.append({'name': file_name, 'size': size, 'extension': extension})
     return render_template('upload_view.html', files=file_info)
 
+# @app.route('/remove_file', methods=['POST'])
+# def remove_file():
+#     filename = request.form['filename']
+#     file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+#     os.remove(file_path)
+#     return redirect('/upload')
+
+@app.route('/remove_file', methods=['GET'])
+def remove_file():
+    filename = request.args.get('filename')
+    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    os.remove(file_path)
+    return redirect('/upload')
+
+
 
 @app.route('/download/<filename>')
 def download_file(filename):
@@ -70,7 +85,6 @@ def open_file(filename):
                 else:
                     return 'Invalid file type'
     return render_template('open.html', table=df.to_html(), filename=filename)
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
