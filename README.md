@@ -58,6 +58,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
+## Authors
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+- **Amanhex** - [https://github.com/amanhex](https://github.com/amanhex)
+
+## License 📄
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) <br />
+This project is licensed under the MIT License.
