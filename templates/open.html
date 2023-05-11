@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open File</title>
+</head>
+<body>
+	<h1>Open File: {{ filename }}</h1>
+	<table>
+		{{ table|safe }}
+	</table>
+	<br>
+	<form action="{{ url_for('download_file', filename=filename) }}">
+		<input type="submit" value="Download File">
+	</form>
+</body>
+</html>

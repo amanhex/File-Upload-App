@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+    <style>
+        table, th, td {
+           border: 1px solid black;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload Files</h2>
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    <hr>
+    <h2>Uploaded Files</h2>
+    {% if files %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Extension</th>
+            <th>Actions</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td>{{ file.name }}</td>
+            <td>{{ file.size }}</td>
+            <td>{{ file.extension }}</td>
+            <td>
+                <a href="{{ url_for('download_file', filename=file.name) }}">Download</a> |
+                <a href="{{ url_for('open_file', filename=file.name) }}">Open</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No files uploaded yet.</p>
+    {% endif %}
+</body>
+</html>
