@@ -1,6 +1,19 @@
 # Flask File Upload
 
-This is a simple Flask web application that allows users to upload files, view and download them. The application is built using Flask framework and Python programming language.
+This is a simple <a href="https://file-upload-app.onrender.com/" target="_blank">Flask web application</a> that allows users to upload files, view and download them. The application is built using Flask framework and Python programming language.
+
+```
+username: admin
+password: admin
+```
+
+<center>
+  
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com) &nbsp;
+  
+</center>
 
 ## Getting Started
 
